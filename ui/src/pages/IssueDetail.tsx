@@ -71,6 +71,7 @@ import { IssueRelatedWorkPanel } from "../components/IssueRelatedWorkPanel";
 import { IssueProperties } from "../components/IssueProperties";
 import { IssueRunLedger } from "../components/IssueRunLedger";
 import { IssueWorkspaceCard } from "../components/IssueWorkspaceCard";
+import { IssueOpenInEditorChip } from "../components/IssueOpenInEditorChip";
 import type { MentionOption } from "../components/MarkdownEditor";
 import { ImageGalleryModal } from "../components/ImageGalleryModal";
 import { ScrollToBottom } from "../components/ScrollToBottom";
@@ -2899,6 +2900,8 @@ export function IssueDetail() {
               No project
             </span>
           )}
+
+          <IssueOpenInEditorChip issue={issue} />
 
           {(issue.labels ?? []).length > 0 && (
             <div className="hidden sm:flex items-center gap-1">
